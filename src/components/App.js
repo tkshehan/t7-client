@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import CharacterSelect from './CharacterSelect';
 import Movelist from './Movelist';
 
-
 class App extends Component {
   render() {
     return (
@@ -12,8 +11,11 @@ class App extends Component {
         </header>
         <main>
           <CharacterSelect />
-          <Movelist />
+          <Movelist character={'Shaheen'} />
         </main>
+        <footer>
+          <p>Footer</p>
+        </footer>
       </>
     );
   }

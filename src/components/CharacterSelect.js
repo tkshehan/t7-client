@@ -3,9 +3,12 @@ import React from 'react'
 class CharacterSelect extends React.Component {
   render() {
     return (
-      <div>
-        <p>Character Select</p>
-      </div>
+      <section className="charSelect">
+        <h2>Characters</h2>
+        <ul>
+          <li>Shaheen</li>
+        </ul>
+      </section>
     )
   }
 }
