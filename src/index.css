@@ -17,10 +17,21 @@ td, th {
 
 ul {
   list-style: none;
+  padding: 0;
 }
 
 table {
   border-collapse: collapse;
+}
+
+button {
+  width: 100px;
+  background: none;
+  border: 1px solid black;
+  font-size: inherit;
+  color: inherit;
+  padding: 2px 2px;
+  margin: 2px 0;
 }
 
 code {

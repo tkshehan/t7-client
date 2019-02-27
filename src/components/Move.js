@@ -2,11 +2,12 @@ import React from 'react'
 
 class Move extends React.Component {
   render() {
+    let properties = Object.keys(this.props.properties);
     return (
       <tr>
         {
-          this.props.properties.map(prop => {
-            return (<td>{prop}</td>);
+          properties.map((prop, i) => {
+            return (<td key={i}>{this.props.properties[prop]}</td>);
           })
         }
       </tr>

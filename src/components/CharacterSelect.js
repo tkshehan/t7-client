@@ -1,12 +1,24 @@
 import React from 'react'
 
 class CharacterSelect extends React.Component {
+
+  handleClick = (event) => {
+    event.preventDefault();
+    this.props.selectCharacter(event.target.value);
+  }
+
   render() {
     return (
       <section className="charSelect">
         <h2>Characters</h2>
         <ul>
-          <li>Shaheen</li>
+          {
+            this.props.characters.sort().map((char, i) => {
+              return (
+                <li key={i}><button value={char} onClick={this.handleClick}>{char.toUpperCase()}</button></li>
+              )
+            })
+          }
         </ul>
       </section>
     )
