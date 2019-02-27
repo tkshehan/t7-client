@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("https://t7-frames.herokuapp.com/frame-data")
+    fetch("https://t7frames-server.herokuapp.com/frame-data")
       .then(res => {
         return res.json()
       })
