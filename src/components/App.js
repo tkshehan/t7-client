@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import CharacterSelect from './CharacterSelect';
-import MoveList from './MoveList';
+import MoveList from './MoveArray';
 
 class App extends Component {
   constructor(props) {
