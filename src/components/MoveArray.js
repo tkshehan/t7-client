@@ -5,14 +5,14 @@ class MoveList extends React.Component {
 
   render() {
     if (!this.props.moves) {
-      return (<h2>Tekken 7 Frame Data</h2>)
+      return (<section className="moveList"><h2>Tekken 7 Frame Data</h2></section>)
     }
 
     const moves = this.props.moves.moves.map((move, i) => {
       return (<Move key={i} properties={move} />)
     });
     return (
-      <section>
+      <section className="moveList">
         <h2>{this.props.moves.character.toUpperCase()}</h2>
         <table>
           <tbody>

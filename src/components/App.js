@@ -10,7 +10,7 @@ class App extends Component {
       isLoaded: false,
       characters: [],
       movelists: {},
-      selected: 'shaheen',
+      selected: '',
     };
   }
 
@@ -49,14 +49,9 @@ class App extends Component {
 
   render() {
     const charMoves = this.state.movelists[this.state.selected];
-    let header = '';
-    if (!this.state.isLoaded) {
-      header = 'Loading'
-    }
     return (
       < >
         <header className="App-header">
-          {header}
         </header>
         <main>
           <CharacterSelect selectCharacter={this.selectCharacter} characters={this.state.characters} />
