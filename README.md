@@ -13,5 +13,5 @@ Server Repo at https://github.com/tkshehan/t7-server
 
 # ToDoServerSide
 - [ ] Add checking to reject corrupted data
-- [x] Clean up residual markup text
+- [x] Clean up markup text from incoming data
 - [ ] Find backup source for frame data incase of rbnorway shut-down
