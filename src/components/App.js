@@ -15,6 +15,10 @@ class App extends Component {
   }
 
   componentDidMount() {
+    this.fetchData();
+  }
+
+  fetchData = () => {
     fetch("https://t7frames-server.herokuapp.com/frame-data")
       .then(res => {
         return res.json()
@@ -32,11 +36,9 @@ class App extends Component {
         // instead of a catch() block so that we don't swallow
         // exceptions from actual bugs in components.
         (error) => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
           console.log(error);
+          console.log('fetch error');
+          this.fetchData();
         }
       )
   }
