@@ -4,8 +4,18 @@ import Move from './Move'
 class MoveList extends React.Component {
 
   render() {
+    if (!this.props.isLoaded) {
+      return (<section className="moveList">
+        <h2>Tekken 7 Frame Data</h2>
+        <h3>Please Wait...</h3>
+        <p>Server may need to wake up</p>
+      </section>)
+    }
     if (!this.props.moves) {
-      return (<section className="moveList"><h2>Tekken 7 Frame Data</h2></section>)
+      return (<section className="moveList">
+        <h2>Tekken 7 Frame Data</h2>
+        <h3>Select a Character</h3>
+      </section>)
     }
 
     const moves = this.props.moves.moves.map((move, i) => {

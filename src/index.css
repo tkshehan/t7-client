@@ -4,7 +4,7 @@ main {
   min-height: 90vh;
 }
 
-h2 {
+h2, h3, h4 {
   text-align: center;
 }
 
@@ -16,6 +16,10 @@ h2 {
 
 .moveList {
   flex-grow: 1;
+}
+
+.moveList p {
+  text-align: center;
 }
 
 td, th {

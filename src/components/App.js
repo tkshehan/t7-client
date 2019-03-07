@@ -57,7 +57,7 @@ class App extends Component {
         </header>
         <main>
           <CharacterSelect selectCharacter={this.selectCharacter} characters={this.state.characters} />
-          <MoveList moves={charMoves} />
+          <MoveList isLoaded={this.state.isLoaded} moves={charMoves} />
         </main>
         <footer>
           <p>
