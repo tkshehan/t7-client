@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import CharacterSelect from './CharacterSelect';
 import MoveList from './MoveArray';
+import initialData from '../initialData';
 
 class App extends Component {
   constructor(props) {
@@ -11,14 +12,30 @@ class App extends Component {
       characters: [],
       movelists: {},
       selected: '',
+      KEY: 'FRAMEDATA',
     };
   }
 
   componentDidMount() {
-    this.fetchData();
+    this.loadData();
+    this.fetchAndSaveData();
   }
 
-  fetchData = () => {
+  loadData = () => {
+    const result = localStorage.getItem(this.state.KEY) || JSON.stringify(initialData);
+    const data = JSON.parse(result);
+    const characters = Object.keys(data);
+    this.setState({
+      characters: characters,
+      movelists: data,
+    });
+  }
+
+  saveData = (data) => {
+    localStorage.setItem(this.state.KEY, JSON.stringify(data));
+  }
+
+  fetchAndSaveData = () => {
     fetch("https://t7frames-server.herokuapp.com/frame-data")
       .then(res => {
         return res.json()
@@ -31,6 +48,7 @@ class App extends Component {
             characters: characters,
             movelists: result,
           });
+          this.saveData(result);
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow
