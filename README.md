@@ -4,7 +4,7 @@ Currently hosted at https://t7frames.herokuapp.com/
 Server Repo at https://github.com/tkshehan/t7-server
 
 # ToDo
-- [ ] Add throws for characters with seperate data
+- [x] Add throws for characters with seperate data
 - [ ] Style for Mobile
 - [ ] Colorize on block -10 and worse [-10, -12, and -15 respectively]
 - [ ] Replace Notes with Icons

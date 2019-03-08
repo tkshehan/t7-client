@@ -19,8 +19,37 @@ class MoveList extends React.Component {
     }
 
     const moves = this.props.moves.moves.map((move, i) => {
-      return (<Move key={i} properties={move} />)
+      return (<Move key={i} properties={move} />);
     });
+
+    let throwSection;
+    if (this.props.moves.throws) {
+      const throws = this.props.moves.throws.map((grab, i) => {
+        return (<Move key={i} properties={grab} />);
+      });
+      throwSection = (
+        < >
+          <h3>Throws</h3>
+          <table>
+            <tbody>
+              <tr>
+                <th>Command</th>
+                <th>Level</th>
+                <th>Damage</th>
+                <th>Startup</th>
+                <th>Break</th>
+                <th>BreakFrame</th>
+                <th>Notes</th>
+              </tr>
+              {
+                throws
+              }
+            </tbody>
+          </table>
+        </>
+      )
+    }
+
     return (
       <section className="moveList">
         <h2>{this.props.moves.character.toUpperCase()}</h2>
@@ -41,6 +70,9 @@ class MoveList extends React.Component {
             }
           </tbody>
         </table>
+        {
+          throwSection
+        }
       </section>
     )
   }
