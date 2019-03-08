@@ -38,7 +38,11 @@ class App extends Component {
         (error) => {
           console.log(error);
           console.log('fetch error');
-          this.fetchData();
+          (async () => {
+            const delay = time => new Promise(res => setTimeout(() => res(), time));
+            await delay(3000);
+            this.fetchData();
+          })();
         }
       )
   }
