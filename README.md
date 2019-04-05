@@ -5,11 +5,11 @@ Server Repo at https://github.com/tkshehan/t7-server
 
 # ToDo
 - [x] Add throws for characters with seperate data
-- [ ] Store data for offline functionality
+- [x] Store data for offline functionality
 - [ ] Style for Mobile
 - [ ] Colorize on block -10 and worse [-10, -12, and -15 respectively]
 - [ ] Replace Notes with Icons
-- [ ] Add initial data to mitigate loading times on first use
+- [x] Add initial data to mitigate loading times on first use
 - [ ] Port to Android
 
 # ToDoServerSide
