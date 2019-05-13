@@ -1,21 +1,40 @@
+header {
+  text-align: center;
+  height: 100px;
+  color: white;
+}
+
 main {
   display: flex;
   flex-direction: row;
   min-height: 90vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+body {
+  background-image:
+    url(/assets/4770.jpg);
+  background-color: #170909;
+  background-size: 100%;
+  background-repeat: repeat;
 }
 
 h2, h3, h4 {
   text-align: center;
+  color: white;
 }
 
 .charSelect {
-  border-right: 1px solid black;
   padding: 10px;
   margin: 10px;
 }
 
 .moveList {
   flex-grow: 1;
+  margin-top: 20px;
+  margin-right: 10px;
 }
 
 .moveList p {
@@ -23,9 +42,17 @@ h2, h3, h4 {
 }
 
 td, th {
-  border: 1px solid gray;
+  border: 1px solid white;
   padding: 2px;
-  text-align: center
+  text-align: center;
+}
+
+tr {
+  background-color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
 ul {
@@ -45,6 +72,8 @@ button {
   color: inherit;
   padding: 2px 2px;
   margin: 2px 0;
+
+  background-color: white;
 }
 
 code {

@@ -10,7 +10,6 @@ class CharacterSelect extends React.Component {
   render() {
     return (
       <section className="charSelect">
-        <h2>Characters</h2>
         <ul>
           {
             this.props.characters.sort().map((char, i) => {

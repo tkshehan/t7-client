@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import CharacterSelect from './CharacterSelect';
 import MoveList from './MoveArray';
 import initialData from '../initialData';
+import Header from './Header';
 
 class App extends Component {
   constructor(props) {
@@ -75,8 +76,7 @@ class App extends Component {
     const charMoves = this.state.movelists[this.state.selected];
     return (
       < >
-        <header className="App-header">
-        </header>
+        <Header char={this.state.selected} />
         <main>
           <CharacterSelect selectCharacter={this.selectCharacter} characters={this.state.characters} />
           <MoveList isLoaded={this.state.isLoaded} moves={charMoves} />

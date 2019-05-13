@@ -6,7 +6,6 @@ class MoveList extends React.Component {
   render() {
     if (!this.props.moves) {
       return (<section className="moveList">
-        <h2>Tekken 7 Frame Data</h2>
         <h3>Select a Character</h3>
       </section>)
     }
@@ -45,7 +44,6 @@ class MoveList extends React.Component {
 
     return (
       <section className="moveList">
-        <h2>{this.props.moves.character.toUpperCase()}</h2>
         <table>
           <tbody>
             <tr>
