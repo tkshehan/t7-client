@@ -41,6 +41,10 @@ h2, h3, h4 {
   text-align: center;
 }
 
+.moveList h3 {
+  color: black;
+}
+
 td, th {
   border: 1px solid white;
   padding: 2px;
