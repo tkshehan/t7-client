@@ -93,3 +93,15 @@ button {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
+.i10 {
+  background-color: lightyellow;
+}
+
+.i12 {
+  background-color: lightpink;
+}
+
+.i15 {
+  background-color: lightcoral;
+}
