@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import CharacterSelect from './CharacterSelect';
 import MoveList from './MoveArray';
-import initialData from '../initialData';
+import initialData from '../data/initialData';
+import resources from '../data/resources';
 import Header from './Header';
 
 class App extends Component {
@@ -23,7 +24,8 @@ class App extends Component {
   }
 
   loadData = () => {
-    const result = localStorage.getItem(this.state.KEY) || JSON.stringify(initialData);
+    const result = localStorage.getItem(this.state.KEY) ||
+      JSON.stringify(initialData);
     const data = JSON.parse(result);
     const characters = Object.keys(data);
     this.setState({
@@ -78,8 +80,15 @@ class App extends Component {
       < >
         <Header char={this.state.selected} />
         <main>
-          <CharacterSelect selectCharacter={this.selectCharacter} characters={this.state.characters} />
-          <MoveList isLoaded={this.state.isLoaded} moves={charMoves} />
+          <CharacterSelect
+            selectCharacter={this.selectCharacter}
+            characters={this.state.characters}
+          />
+          <MoveList
+            isLoaded={this.state.isLoaded}
+            moves={charMoves}
+            resources={resources[this.state.selected]}
+          />
         </main>
         <footer>
           <p>

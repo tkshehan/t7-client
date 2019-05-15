@@ -1,3 +1,7 @@
+a:visited {
+  color: blue;
+}
+
 header {
   text-align: center;
   height: 100px;
@@ -35,10 +39,16 @@ h2, h3, h4 {
   flex-grow: 1;
   margin-top: 20px;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .moveList p {
   text-align: center;
+}
+
+.resources p {
+  text-align: right;
+  margin-right: 30px;
 }
 
 .moveList h3 {
@@ -47,8 +57,8 @@ h2, h3, h4 {
 
 td, th {
   border: 1px solid white;
-  padding: 2px;
   text-align: center;
+  padding: 4px;
 }
 
 tr {

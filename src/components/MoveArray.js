@@ -42,29 +42,41 @@ class MoveList extends React.Component {
       )
     }
 
+    let punishment = '';
+    if (this.props.resources) {
+      punishment =
+        <a href={this.props.resources.punishment}>
+          Punishment Guide
+        </a>;
+    }
     return (
-      <section className="moveList">
-        <table>
-          <tbody>
-            <tr>
-              <th>Command</th>
-              <th>Hit level</th>
-              <th>Damage</th>
-              <th>Start up</th>
-              <th>Block</th>
-              <th>Hit</th>
-              <th>Counter hit</th>
-              <th>Notes</th>
-            </tr>
-            {
-              moves
-            }
-          </tbody>
-        </table>
-        {
-          throwSection
-        }
-      </section>
+      < >
+        <section className="moveList">
+          <section className="resources">
+            <p>{punishment}</p>
+          </section>
+          <table>
+            <tbody>
+              <tr>
+                <th>Command</th>
+                <th>Hit level</th>
+                <th>Damage</th>
+                <th>Start up</th>
+                <th>Block</th>
+                <th>Hit</th>
+                <th>Counter hit</th>
+                <th>Notes</th>
+              </tr>
+              {
+                moves
+              }
+            </tbody>
+          </table>
+          {
+            throwSection
+          }
+        </section>
+      </>
     )
   }
 }
