@@ -1,5 +1,6 @@
-import React from 'react'
-import Move from './Move'
+import React from 'react';
+import Move from './Move';
+import Resources from './Resources';
 
 class MoveList extends React.Component {
 
@@ -42,19 +43,10 @@ class MoveList extends React.Component {
       )
     }
 
-    let punishment = '';
-    if (this.props.resources) {
-      punishment =
-        <a href={this.props.resources.punishment}>
-          Punishment Guide
-        </a>;
-    }
     return (
       < >
         <section className="moveList">
-          <section className="resources">
-            <p>{punishment}</p>
-          </section>
+          <Resources resources={this.props.resources} />
           <table>
             <tbody>
               <tr>

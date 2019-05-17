@@ -46,8 +46,19 @@ h2, h3, h4 {
   text-align: center;
 }
 
+.modal {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .resources p {
-  text-align: right;
+  text-align: center;
   margin-right: 30px;
 }
 
@@ -104,4 +115,8 @@ code {
 
 .i15 {
   background-color: lightcoral;
+}
+
+.hidden {
+  display: none;
 }

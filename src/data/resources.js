@@ -1,104 +1,104 @@
 export default {
   gigas: {
-    punishment: 'https://www.youtube.com/watch?v=UHOfWBlnWvg',
+    punishment: 'https://www.youtube.com/embed/UHOfWBlnWvg',
   },
   noctis: {
-    punishment: 'https://www.youtube.com/watch?v=eXlBqejJE5U',
+    punishment: 'https://www.youtube.com/embed/eXlBqejJE5U',
   },
   law: {
-    punishment: 'https://www.youtube.com/watch?v=fCM_AktaCJ8',
+    punishment: 'https://www.youtube.com/embed/fCM_AktaCJ8',
   },
   miguel: {
-    punishment: 'https://www.youtube.com/watch?v=vvTACA6wXQY',
+    punishment: 'https://www.youtube.com/embed/vvTACA6wXQY',
   },
   marduk: {
-    punishment: 'https://www.youtube.com/watch?v=IdvIz1s7dRw',
+    punishment: 'https://www.youtube.com/embed/IdvIz1s7dRw',
   },
   xiaoyu: {
-    punishment: 'https://www.youtube.com/watch?v=P8gWx62t8YM',
+    punishment: 'https://www.youtube.com/embed/P8gWx62t8YM',
   },
   geese: {
-    punishment: 'https://www.youtube.com/watch?v=pu9teBcJiZQ',
+    punishment: 'https://www.youtube.com/embed/pu9teBcJiZQ',
   },
   negan: {
-    punishment: 'https://www.youtube.com/watch?v=BiJX6DLblGw',
+    punishment: 'https://www.youtube.com/embed/BiJX6DLblGw',
   },
   julia: {
-    punishment: 'https://www.youtube.com/watch?v=irsC_fa3Ox8',
+    punishment: 'https://www.youtube.com/embed/irsC_fa3Ox8',
   },
   'master-raven': {
-    punishment: 'https://www.youtube.com/watch?v=cgccYX_deMY',
+    punishment: 'https://www.youtube.com/embed/cgccYX_deMY',
   },
   king: {
-    punishment: 'https://www.youtube.com/watch?v=jgoWeFRWwpg',
+    punishment: 'https://www.youtube.com/embed/jgoWeFRWwpg',
   },
   dragunov: {
-    punishment: 'https://www.youtube.com/watch?v=JXoJEYyBSEA',
+    punishment: 'https://www.youtube.com/embed/JXoJEYyBSEA',
   },
   feng: {
-    punishment: 'https://www.youtube.com/watch?v=m24ma1y_k2M',
+    punishment: 'https://www.youtube.com/embed/m24ma1y_k2M',
   },
   jin: {
-    punishment: 'https://www.youtube.com/watch?v=DbocmsR3m4o',
+    punishment: 'https://www.youtube.com/embed/DbocmsR3m4o',
   },
   jack7: {
-    punishment: 'https://www.youtube.com/watch?v=DbsdJmSzgEY',
+    punishment: 'https://www.youtube.com/embed/DbsdJmSzgEY',
   },
   josie: {
-    punishment: 'https://www.youtube.com/watch?v=spabiSWsHw4',
+    punishment: 'https://www.youtube.com/embed/spabiSWsHw4',
   },
   'lucky-chloe': {
-    punishment: 'https://www.youtube.com/watch?v=AROGUVsphjo',
+    punishment: 'https://www.youtube.com/embed/AROGUVsphjo',
   },
   asuka: {
-    punishment: 'https://www.youtube.com/watch?v=N6S-OuM-taw',
+    punishment: 'https://www.youtube.com/embed/N6S-OuM-taw',
   },
   'devil-jin': {
-    punishment: 'https://www.youtube.com/watch?v=vx6qJuiyD9s',
+    punishment: 'https://www.youtube.com/embed/vx6qJuiyD9s',
   },
   claudio: {
-    punishment: 'https://www.youtube.com/watch?v=hflMhhdyCPo',
+    punishment: 'https://www.youtube.com/embed/hflMhhdyCPo',
   },
   shaheen: {
-    punishment: 'https://www.youtube.com/watch?v=6jS1BWYF210',
+    punishment: 'https://www.youtube.com/embed/6jS1BWYF210',
   },
   lili: {
-    punishment: 'https://www.youtube.com/watch?v=xnpcDUOVl4c',
+    punishment: 'https://www.youtube.com/embed/xnpcDUOVl4c',
   },
   bryan: {
-    punishment: 'https://www.youtube.com/watch?v=XZLyazA8MpQ',
+    punishment: 'https://www.youtube.com/embed/XZLyazA8MpQ',
   },
   steve: {
-    punishment: 'https://www.youtube.com/watch?v=_vOtOaGplvo',
+    punishment: 'https://www.youtube.com/embed/_vOtOaGplvo',
   },
   eliza: {
-    punishment: 'https://www.youtube.com/watch?v=YDLddxm8a4I',
+    punishment: 'https://www.youtube.com/embed/YDLddxm8a4I',
   },
   katarina: {
-    punishment: 'https://www.youtube.com/watch?v=BGGHHqlrn7A',
+    punishment: 'https://www.youtube.com/embed/BGGHHqlrn7A',
   },
   akuma: {
-    punishment: 'https://www.youtube.com/watch?v=LIHIa2xNXEg',
+    punishment: 'https://www.youtube.com/embed/LIHIa2xNXEg',
   },
   bob: {
-    punishment: 'https://www.youtube.com/watch?v=OQsiqNzTpOs',
+    punishment: 'https://www.youtube.com/embed/OQsiqNzTpOs',
   },
   heihachi: {
-    punishment: 'https://www.youtube.com/watch?v=EvFIZnOdatM',
+    punishment: 'https://www.youtube.com/embed/EvFIZnOdatM',
   },
   alisa: {
-    punishment: 'https://www.youtube.com/watch?v=Nwp97WYrZV8',
+    punishment: 'https://www.youtube.com/embed/Nwp97WYrZV8',
   },
   paul: {
-    punishment: 'https://www.youtube.com/watch?v=6lY22Uly-3c',
+    punishment: 'https://www.youtube.com/embed/6lY22Uly-3c',
   },
   kazumi: {
-    punishment: 'https://www.youtube.com/watch?v=5BREKhkVRPw',
+    punishment: 'https://www.youtube.com/embed/5BREKhkVRPw',
   },
   leo: {
-    punishment: 'https://www.youtube.com/watch?v=S6QAuuvxED0',
+    punishment: 'https://www.youtube.com/embed/S6QAuuvxED0',
   },
   kazuya: {
-    punishment: 'https://www.youtube.com/watch?v=cvRzeS927Us',
+    punishment: 'https://www.youtube.com/embed/cvRzeS927Us',
   },
 };
