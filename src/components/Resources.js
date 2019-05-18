@@ -24,6 +24,7 @@ class Resources extends React.Component {
           <Modal
             url={this.props.resources.punishment}
             show={this.state.showModal}
+            key={this.props.resources.punishment}
           />
 
           <p>

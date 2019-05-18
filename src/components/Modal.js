@@ -1,10 +1,6 @@
 import React from 'react';
-import Iframe from 'react-simple-iframe';
 
 class Modal extends React.Component {
-  state = {
-    iframeLoaded: false
-  }
 
   handleLoadedIframe = () => {
     this.setState({
@@ -13,22 +9,17 @@ class Modal extends React.Component {
   }
 
   render() {
-
-    const {iframeLoaded} = this.state;
     let className = 'modal';
     if (!this.props.show) {
       className = 'modal hidden';
     }
+
     return (
       <div className={className}>
-        {!iframeLoaded && <p>LOADING....</p>}
-        <Iframe
-          src={this.props.url}
-          frameBorder='0'
-          height="315"
-          width="420"
-          onLoaded={this.handleLoadedIframe}
-        />
+        <iframe width="420" height="315"
+          title={this.props.url}
+          src={this.props.url}>
+        </iframe>
       </div>
     )
   }
