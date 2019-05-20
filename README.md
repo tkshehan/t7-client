@@ -6,10 +6,11 @@ Server Repo at https://github.com/tkshehan/t7-server
 # ToDo
 - [x] Add throws for characters with seperate data
 - [x] Store data for offline functionality
-- [ ] Colorize on block -10 and worse [-10, -12, and -15 respectively]
+- [x] Colorize on block -10 and worse [-10, -12, and -15 respectively]
 - [ ] Replace Notes with Icons
-- [ ] Embed punishment videos for each character
+- [x] Embed punishment videos for each character
 - [x] Add initial data to mitigate loading times on first use
+- [x] Collapse menu for mobile viewing
 
 # ToDoServerSide
 - [ ] Seperate throw data for all characters
