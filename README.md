@@ -4,8 +4,8 @@ Currently hosted at https://t7frames.herokuapp.com/
 Server Repo at https://github.com/tkshehan/t7-server
 
 # ToDo
-- [ ] **Write unit tests with enzyme
-- [ ] **Implement redux to manage growing complexity
+- [ ] **Write unit tests with enzyme**
+- [ ] **Implement redux to manage growing complexity**
 - [ ] Replace Notes with Icons
 
 # Done
