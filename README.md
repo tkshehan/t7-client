@@ -4,15 +4,20 @@ Currently hosted at https://t7frames.herokuapp.com/
 Server Repo at https://github.com/tkshehan/t7-server
 
 # ToDo
+- [ ] **Write unit tests with enzyme
+- [ ] **Implement redux to manage growing complexity
+- [ ] Replace Notes with Icons
+
+# Done
+- [x] Colorize on block -10 and worse [-10, -12, and -15 respectively]
 - [x] Add throws for characters with seperate data
 - [x] Store data for offline functionality
-- [x] Colorize on block -10 and worse [-10, -12, and -15 respectively]
-- [ ] Replace Notes with Icons
 - [x] Embed punishment videos for each character
 - [x] Add initial data to mitigate loading times on first use
 - [x] Collapse menu for mobile viewing
 
 # ToDoServerSide
+- [ ] Add user authentication from future features
 - [ ] Seperate throw data for all characters
 - [x] Add checking to reject corrupted data
 - [x] Clean up markup text from incoming data
