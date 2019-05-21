@@ -17,7 +17,7 @@ Server Repo at https://github.com/tkshehan/t7-server
 - [x] Collapse menu for mobile viewing
 
 # ToDoServerSide
-- [ ] Add user authentication from future features
+- [ ] Add user authentication for future features
 - [ ] Seperate throw data for all characters
 - [x] Add checking to reject corrupted data
 - [x] Clean up markup text from incoming data
