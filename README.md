@@ -19,6 +19,6 @@ Server Repo at https://github.com/tkshehan/t7-server
 # ToDoServerSide
 - [ ] Add user authentication for future features
 - [ ] Seperate throw data for all characters
-- [x] Add checking to reject corrupted data
-- [x] Clean up markup text from incoming data
 - [ ] Find backup source for frame data incase of rbnorway shut-down
+- [x] Add checking to reject corrupted data(continuous)
+- [x] Clean up markup text from incoming data(continuous)
