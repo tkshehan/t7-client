@@ -1,13 +1,6 @@
 import React from 'react';
 
 class Modal extends React.Component {
-
-  handleLoadedIframe = () => {
-    this.setState({
-      iframeLoaded: true
-    });
-  }
-
   render() {
     let className = 'modal';
     if (!this.props.show) {
