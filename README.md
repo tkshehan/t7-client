@@ -27,6 +27,8 @@ Server Repo at https://github.com/tkshehan/t7-server
 - [x] Collapse menu for mobile viewing
 
 ## ToDoServerSide
+- [ ] Change data storage from json to database(mongo or sql)
+- [ ] Add more specific routes and queries
 - [ ] Add user authentication for future features
 - [ ] Seperate throw data for all characters
 - [ ] Find backup source for frame data incase of rbnorway shut-down
