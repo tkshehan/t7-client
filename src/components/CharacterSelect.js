@@ -30,4 +30,4 @@ class CharacterSelect extends React.Component {
   }
 }
 
-export default CharacterSelect
+export default CharacterSelect;
