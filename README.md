@@ -5,6 +5,7 @@ Server Repo at https://github.com/tkshehan/t7-server
 
 # ToDo
 - [ ] **Implement redux to manage growing complexity**
+- [ ] Manage deployment through dev branch, merging automatically on succesful testing
 - [ ] Replace Notes with Icons
 
 # Done
