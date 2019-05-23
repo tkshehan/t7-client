@@ -5,6 +5,8 @@ a:visited {
 body, html, main {
   width: 100vmax;
   margin: 0;
+
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
