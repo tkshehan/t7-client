@@ -5,7 +5,14 @@
   "dependencies": {
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
+<<<<<<< Updated upstream
     "react-simple-iframe": "0.0.5"
+=======
+    "react-redux": "^7.0.3",
+    "react-simple-iframe": "0.0.5",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
+>>>>>>> Stashed changes
   },
   "scripts": {
     "start": "react-scripts start",

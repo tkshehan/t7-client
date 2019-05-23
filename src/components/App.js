@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import CharacterSelect from './CharacterSelect';
 import MoveList from './MoveArray';
+import Header from './Header';
+
 import initialData from '../data/initialData';
 import resources from '../data/resources';
-import Header from './Header';
 
 class App extends Component {
   constructor(props) {
@@ -77,7 +78,7 @@ class App extends Component {
   render() {
     const charMoves = this.state.movelists[this.state.selected];
     return (
-      < >
+      <>
         <Header char={this.state.selected} />
         <main>
           <CharacterSelect
