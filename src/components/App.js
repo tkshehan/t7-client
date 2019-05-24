@@ -13,7 +13,7 @@ class App extends Component {
       isLoaded: false,
       characters: [],
       movelists: {},
-      selected: '',
+      selected: 'akuma',
       KEY: 'FRAMEDATA',
     };
   }
