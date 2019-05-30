@@ -1,8 +1,20 @@
 import * as actions from '../actions';
 
 const initialState = {
-
+  error: null,
+  isLoaded: false,
+  characters: [],
+  movelists: {},
+  selected: 'akuma',
+  KEY: 'FRAMEDATA',
 };
 
-export const appReducer = (state = initialState, action) => {
-}
+export const frameDataReducer = (state = initialState, action) => {
+  if (action.type === actions.CHANGE_CHARACTER) {
+    return Object.assign({}, state, {
+      selected: 'akuma',
+    });
+  }
+
+  return state;
+};
