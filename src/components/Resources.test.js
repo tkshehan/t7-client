@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 
-import Resources from './Resources';
+import {Resources} from './Resources';
 import Modal from './Modal';
 
 const resource = {
