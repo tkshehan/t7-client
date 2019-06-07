@@ -3,7 +3,7 @@ import Modal from './Modal';
 import {connect} from 'react-redux';
 import resources from '../data/resources';
 
-class Resources extends React.Component {
+export class Resources extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
