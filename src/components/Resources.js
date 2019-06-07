@@ -1,5 +1,7 @@
 import React from 'react';
 import Modal from './Modal';
+import {connect} from 'react-redux';
+import resources from '../data/resources';
 
 class Resources extends React.Component {
   constructor(props) {
@@ -18,13 +20,13 @@ class Resources extends React.Component {
 
   render() {
     let punishment = '';
-    if (this.props.resources) {
+    if (resources[this.props.selected]) {
       punishment = (
         < >
           <Modal
-            url={this.props.resources.punishment}
+            url={resources[this.props.selected].punishment}
             show={this.state.showModal}
-            key={this.props.resources.punishment}
+            key={resources[this.props.selected].punishment}
           />
 
           <p>
@@ -43,4 +45,10 @@ class Resources extends React.Component {
   }
 }
 
-export default Resources;
+const mapStateToProps = (state) => {
+  return {
+    selected: state.selected,
+  };
+};
+
+export default connect(mapStateToProps)(Resources);

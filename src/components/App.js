@@ -5,8 +5,6 @@ import Header from './Header';
 
 import {connect} from 'react-redux';
 import {setCharacters, setMoveData} from '../actions';
-
-import resources from '../data/resources';
 import {STORAGE_KEY} from '../data/config';
 
 export class App extends Component {
@@ -66,7 +64,6 @@ export class App extends Component {
           <CharacterSelect />
           <MoveList
             moves={charMoves}
-            resources={resources[this.props.selected]}
           />
         </main>
         <footer>
