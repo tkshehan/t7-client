@@ -4,55 +4,12 @@ import MoveList from './MoveArray';
 import Header from './Header';
 
 import {connect} from 'react-redux';
-import {setCharacters, setMoveData} from '../actions';
-import {STORAGE_KEY} from '../data/config';
+import {fetchData, loadData} from '../actions';
 
 export class App extends Component {
-
   componentDidMount() {
-    this.loadData();
-    this.fetchAndSaveData();
-  }
-
-  loadData = () => {
-    const result = localStorage.getItem(STORAGE_KEY) || false;
-    if (!result) return;
-
-    const moveData = JSON.parse(result);
-    const characters = Object.keys(moveData);
-    this.props.setCharacters(characters);
-    this.props.setMoveData(moveData);
-  }
-
-  saveData = (data) => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-  }
-
-  fetchAndSaveData = () => {
-    fetch("https://t7frames-server.herokuapp.com/frame-data")
-      .then(res => {
-        return res.json()
-      })
-      .then(
-        (result) => {
-          const characters = Object.keys(result);
-          this.props.setCharacters(characters);
-          this.props.setMoveData(result);
-          this.saveData(result);
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (error) => {
-          console.log(error);
-          console.log('fetch error');
-          (async () => {
-            const delay = time => new Promise(res => setTimeout(() => res(), time));
-            await delay(3000);
-            this.fetchData();
-          })();
-        }
-      )
+    this.props.loadData();
+    this.props.fetchData();
   }
 
   render() {
@@ -82,8 +39,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    setCharacters: (characters) => dispatch(setCharacters(characters)),
-    setMoveData: (moveData) => dispatch(setMoveData(moveData)),
+    fetchData: () => dispatch(fetchData()),
+    loadData: () => dispatch(loadData()),
   };
 }
 
