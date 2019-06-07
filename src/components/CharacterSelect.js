@@ -1,10 +1,12 @@
 import React from 'react'
+import {changeCharacter} from '../actions';
+import {connect} from 'react-redux';
 
 class CharacterSelect extends React.Component {
 
   handleClick = (event) => {
     event.preventDefault();
-    this.props.selectCharacter(event.target.value);
+    this.props.changeCharacter(event.target.value);
   }
 
   render() {
@@ -30,4 +32,10 @@ class CharacterSelect extends React.Component {
   }
 }
 
-export default CharacterSelect;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    changeCharacter: (character) => dispatch(changeCharacter(character))
+  };
+};
+
+export default connect(() => {}, mapDispatchToProps)(CharacterSelect);

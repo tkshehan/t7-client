@@ -9,12 +9,14 @@ const initialState = {
   KEY: 'FRAMEDATA',
 };
 
-export const frameDataReducer = (state = initialState, action) => {
+const frameDataReducer = (state = initialState, action) => {
   if (action.type === actions.CHANGE_CHARACTER) {
     return Object.assign({}, state, {
-      selected: 'akuma',
+      selected: action.character,
     });
   }
 
   return state;
 };
+
+export default frameDataReducer;

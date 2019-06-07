@@ -3,6 +3,8 @@ import CharacterSelect from './CharacterSelect';
 import MoveList from './MoveArray';
 import Header from './Header';
 
+import {connect} from 'react-redux';
+
 import initialData from '../data/initialData';
 import resources from '../data/resources';
 
@@ -14,7 +16,6 @@ class App extends Component {
       isLoaded: false,
       characters: [],
       movelists: {},
-      selected: '',
       KEY: 'FRAMEDATA',
     };
   }
@@ -69,26 +70,19 @@ class App extends Component {
       )
   }
 
-  selectCharacter = (char) => {
-    this.setState({
-      selected: char
-    });
-  }
-
   render() {
-    const charMoves = this.state.movelists[this.state.selected];
+    const charMoves = this.state.movelists[this.props.selected];
     return (
       <>
-        <Header char={this.state.selected} />
+        <Header char={this.props.selected} />
         <main>
           <CharacterSelect
-            selectCharacter={this.selectCharacter}
             characters={this.state.characters}
           />
           <MoveList
             isLoaded={this.state.isLoaded}
             moves={charMoves}
-            resources={resources[this.state.selected]}
+            resources={resources[this.props.selected]}
           />
         </main>
         <footer>
@@ -102,5 +96,10 @@ class App extends Component {
     );
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    selected: state.selected
+  };
+};
 
-export default App;
+export default connect(mapStateToProps)(App);
