@@ -16,6 +16,7 @@ Server Repo at https://github.com/tkshehan/t7-server
 - [ ] **Implement redux to manage growing complexity**
 - [ ] Manage deployment through dev branch, merging automatically on succesful testing
 - [ ] Replace Notes with Icons
+- [ ] Set up a react-router for future pages
 
 ## Done
 - [x] Write unit tests with enzyme/jest

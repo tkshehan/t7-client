@@ -46,7 +46,7 @@ class MoveList extends React.Component {
     return (
       < >
         <section className="moveList">
-          <Resources resources={this.props.resources} />
+          <Resources />
           <table>
             <tbody>
               <tr>

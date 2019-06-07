@@ -1,105 +1,47 @@
 import React, {Component} from 'react';
 import CharacterSelect from './CharacterSelect';
 import MoveList from './MoveArray';
-import initialData from '../data/initialData';
-import resources from '../data/resources';
 import Header from './Header';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      error: null,
-      isLoaded: false,
-      characters: [],
-      movelists: {},
-      selected: 'akuma',
-      KEY: 'FRAMEDATA',
-    };
-  }
+import {connect} from 'react-redux';
+import {fetchData, loadData} from '../actions';
 
+export class App extends Component {
   componentDidMount() {
-    this.loadData();
-    this.fetchAndSaveData();
-  }
-
-  loadData = () => {
-    const result = localStorage.getItem(this.state.KEY) ||
-      JSON.stringify(initialData);
-    const data = JSON.parse(result);
-    const characters = Object.keys(data);
-    this.setState({
-      characters: characters,
-      movelists: data,
-    });
-  }
-
-  saveData = (data) => {
-    localStorage.setItem(this.state.KEY, JSON.stringify(data));
-  }
-
-  fetchAndSaveData = () => {
-    fetch("https://t7frames-server.herokuapp.com/frame-data")
-      .then(res => {
-        return res.json()
-      })
-      .then(
-        (result) => {
-          const characters = Object.keys(result);
-          this.setState({
-            isLoaded: true,
-            characters: characters,
-            movelists: result,
-          });
-          this.saveData(result);
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (error) => {
-          console.log(error);
-          console.log('fetch error');
-          (async () => {
-            const delay = time => new Promise(res => setTimeout(() => res(), time));
-            await delay(3000);
-            this.fetchData();
-          })();
-        }
-      )
-  }
-
-  selectCharacter = (char) => {
-    this.setState({
-      selected: char
-    });
+    this.props.loadData();
+    this.props.fetchData();
   }
 
   render() {
-    const charMoves = this.state.movelists[this.state.selected];
+    const charMoves = this.props.moveData[this.props.selected];
     return (
-      < >
-        <Header char={this.state.selected} />
+      <>
+        <Header char={this.props.selected} />
         <main>
-          <CharacterSelect
-            selectCharacter={this.selectCharacter}
-            characters={this.state.characters}
-          />
+          <CharacterSelect />
           <MoveList
-            isLoaded={this.state.isLoaded}
             moves={charMoves}
-            resources={resources[this.state.selected]}
           />
         </main>
         <footer>
-          <p>
-            {
-              this.state.error
-            }
-          </p>
         </footer>
       </>
     );
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    selected: state.selected,
+    moveData: state.moveData,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchData: () => dispatch(fetchData()),
+    loadData: () => dispatch(loadData()),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
