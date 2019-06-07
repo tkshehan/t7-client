@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 
-import CharacterSelect from './CharacterSelect';
+import {CharacterSelect} from './CharacterSelect';
 const characters = ['1', '2', '3'];
 
 describe('<CharacterSelect />', () => {

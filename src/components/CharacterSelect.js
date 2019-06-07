@@ -2,7 +2,7 @@ import React from 'react'
 import {changeCharacter} from '../actions';
 import {connect} from 'react-redux';
 
-class CharacterSelect extends React.Component {
+export class CharacterSelect extends React.Component {
 
   handleClick = (event) => {
     event.preventDefault();
@@ -32,10 +32,16 @@ class CharacterSelect extends React.Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    characters: state.characters,
+  };
+};
+
 const mapDispatchToProps = (dispatch) => {
   return {
     changeCharacter: (character) => dispatch(changeCharacter(character))
   };
 };
 
-export default connect(() => {}, mapDispatchToProps)(CharacterSelect);
+export default connect(mapStateToProps, mapDispatchToProps)(CharacterSelect);

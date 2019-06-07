@@ -4,21 +4,12 @@ import MoveList from './MoveArray';
 import Header from './Header';
 
 import {connect} from 'react-redux';
+import {setCharacters, setMoveData} from '../actions';
 
-import initialData from '../data/initialData';
 import resources from '../data/resources';
+import {STORAGE_KEY} from '../data/config';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      error: null,
-      isLoaded: false,
-      characters: [],
-      movelists: {},
-      KEY: 'FRAMEDATA',
-    };
-  }
+export class App extends Component {
 
   componentDidMount() {
     this.loadData();
@@ -26,18 +17,17 @@ class App extends Component {
   }
 
   loadData = () => {
-    const result = localStorage.getItem(this.state.KEY) ||
-      JSON.stringify(initialData);
-    const data = JSON.parse(result);
-    const characters = Object.keys(data);
-    this.setState({
-      characters: characters,
-      movelists: data,
-    });
+    const result = localStorage.getItem(STORAGE_KEY) || false;
+    if (!result) return;
+
+    const moveData = JSON.parse(result);
+    const characters = Object.keys(moveData);
+    this.props.setCharacters(characters);
+    this.props.setMoveData(moveData);
   }
 
   saveData = (data) => {
-    localStorage.setItem(this.state.KEY, JSON.stringify(data));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
   }
 
   fetchAndSaveData = () => {
@@ -48,11 +38,8 @@ class App extends Component {
       .then(
         (result) => {
           const characters = Object.keys(result);
-          this.setState({
-            isLoaded: true,
-            characters: characters,
-            movelists: result,
-          });
+          this.props.setCharacters(characters);
+          this.props.setMoveData(result);
           this.saveData(result);
         },
         // Note: it's important to handle errors here
@@ -71,35 +58,36 @@ class App extends Component {
   }
 
   render() {
-    const charMoves = this.state.movelists[this.props.selected];
+    const charMoves = this.props.moveData[this.props.selected];
     return (
       <>
         <Header char={this.props.selected} />
         <main>
-          <CharacterSelect
-            characters={this.state.characters}
-          />
+          <CharacterSelect />
           <MoveList
-            isLoaded={this.state.isLoaded}
             moves={charMoves}
             resources={resources[this.props.selected]}
           />
         </main>
         <footer>
-          <p>
-            {
-              this.state.error
-            }
-          </p>
         </footer>
       </>
     );
   }
 }
+
 const mapStateToProps = (state) => {
   return {
-    selected: state.selected
+    selected: state.selected,
+    moveData: state.moveData,
   };
 };
 
-export default connect(mapStateToProps)(App);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setCharacters: (characters) => dispatch(setCharacters(characters)),
+    setMoveData: (moveData) => dispatch(setMoveData(moveData)),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
