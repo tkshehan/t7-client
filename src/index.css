@@ -23,6 +23,7 @@ main {
   max-width: 1000px;
   margin: 0 auto;
   background-color: white;
+  border-radius: 3px;
 }
 
 body {
@@ -114,6 +115,7 @@ button {
   margin: 2px 0;
 
   background-color: white;
+  border-radius: 3px;
 }
 
 code {
