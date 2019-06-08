@@ -13,11 +13,13 @@ Server Repo at https://github.com/tkshehan/t7-server
 - TravisCI *(coming)*
 
 ## ToDo
-- [ ] **Implement redux to manage growing complexity**
 - [ ] Manage deployment through dev branch, merging automatically on succesful testing
 - [ ] Replace Notes with Icons
+- [ ] react-router for more explicit navigation
+- [ ] BEM CSS architecture
 
 ## Done
+- [x] Implement redux to manage growing complexity
 - [x] Write unit tests with enzyme/jest
 - [x] Colorize on block -10 and worse [-10, -12, and -15 respectively]
 - [x] Add throws for characters with seperate data
