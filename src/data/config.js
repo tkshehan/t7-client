@@ -1,0 +1,3 @@
+const STORAGE_KEY = 'FRAMEDATA';
+
+export {STORAGE_KEY};
