@@ -15,12 +15,8 @@ Server Repo at https://github.com/tkshehan/t7-server
 ## ToDo
 - [ ] Manage deployment through dev branch, merging automatically on succesful testing
 - [ ] Replace Notes with Icons
-<<<<<<< HEAD
-- [ ] react-router for more explicit navigation
 - [ ] BEM CSS architecture
-=======
 - [ ] Set up a react-router for future pages
->>>>>>> 9f69c98ad977a62fd62f72c751e4a54fe4eaa208
 
 ## Done
 - [x] Implement redux to manage growing complexity
