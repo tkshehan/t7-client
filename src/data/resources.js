@@ -1,12 +1,30 @@
 export default {
+  anna: {
+    punishment: 'https://www.youtube.com/embed/tKQAhPtH_0c',
+  },
+  'armor-king': {
+    punishment: 'https://www.youtube.com/embed/kH_PhEfc8zg',
+  },
   gigas: {
     punishment: 'https://www.youtube.com/embed/UHOfWBlnWvg',
+  },
+  eddy: {
+    punishment: 'https://www.youtube.com/embed/UpXMWPhNNmk',
   },
   noctis: {
     punishment: 'https://www.youtube.com/embed/eXlBqejJE5U',
   },
   law: {
     punishment: 'https://www.youtube.com/embed/fCM_AktaCJ8',
+  },
+  lars: {
+    punishment: 'https://www.youtube.com/embed/mqirXFe81_0',
+  },
+  lee: {
+    punishment: 'https://www.youtube.com/embed/7vyD5ygXkhw',
+  },
+  kuma: {
+    punishment: 'https://www.youtube.com/embed/UpXMWPhNNmk',
   },
   miguel: {
     punishment: 'https://www.youtube.com/embed/vvTACA6wXQY',
@@ -50,6 +68,9 @@ export default {
   'lucky-chloe': {
     punishment: 'https://www.youtube.com/embed/AROGUVsphjo',
   },
+  nina: {
+    punishment: 'https://www.youtube.com/embed/GrwrPOjApqI',
+  },
   asuka: {
     punishment: 'https://www.youtube.com/embed/N6S-OuM-taw',
   },
@@ -85,6 +106,9 @@ export default {
   },
   heihachi: {
     punishment: 'https://www.youtube.com/embed/EvFIZnOdatM',
+  },
+  hwoarang: {
+    punishment: 'https://www.youtube.com/embed/LgL6qa8SGwc'
   },
   alisa: {
     punishment: 'https://www.youtube.com/embed/Nwp97WYrZV8',
