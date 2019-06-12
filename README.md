@@ -16,10 +16,10 @@ Server Repo at https://github.com/tkshehan/t7-server
 - [ ] Manage deployment through dev branch, merging automatically on succesful testing
 - [ ] Replace Notes with Icons
 - [ ] BEM CSS architecture
-- [ ] Set up a react-router for future pages
 
 ## Done
 - [x] Implement redux to manage growing complexity
+- [x] Set up a react-router for future pages
 - [x] Write unit tests with enzyme/jest
 - [x] Colorize on block -10 and worse [-10, -12, and -15 respectively]
 - [x] Add throws for characters with seperate data
