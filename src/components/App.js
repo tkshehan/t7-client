@@ -1,47 +1,11 @@
-import React, {Component} from 'react';
-import CharacterSelect from './CharacterSelect';
-import MoveList from './MoveArray';
-import Header from './Header';
+import React from 'react';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import FrameDataApp from './FrameDataApp';
 
-import {connect} from 'react-redux';
-import {fetchData, loadData} from '../actions';
-
-export class App extends Component {
-  componentDidMount() {
-    this.props.loadData();
-    this.props.fetchData();
-  }
-
-  render() {
-    const charMoves = this.props.moveData[this.props.selected];
-    return (
-      <>
-        <Header char={this.props.selected} />
-        <main>
-          <CharacterSelect />
-          <MoveList
-            moves={charMoves}
-          />
-        </main>
-        <footer>
-        </footer>
-      </>
-    );
-  }
+export default function App(props) {
+  return (
+    <Router>
+      <Route exact path="/" component={FrameDataApp} />
+    </Router>
+  );
 }
-
-const mapStateToProps = (state) => {
-  return {
-    selected: state.selected,
-    moveData: state.moveData,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    fetchData: () => dispatch(fetchData()),
-    loadData: () => dispatch(loadData()),
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
