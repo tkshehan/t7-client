@@ -1,0 +1,19 @@
+a:visited {
+  color: blue;
+}
+
+body, html, main {
+  width: 100vmax;
+  margin: 0;
+
+  color: #333333;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-image:
+    url(/assets/4770.jpg);
+  background-color: #170909;
+  background-size: 100%;
+  background-repeat: repeat;
+}
