@@ -18,7 +18,7 @@ export class FrameDataApp extends Component {
     return (
       <>
         <Header char={this.props.selected} />
-        <main>
+        <main className="main">
           <CharacterSelect />
           <MoveList
             moves={charMoves}
