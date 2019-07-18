@@ -1,0 +1,25 @@
+.modal {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.resources {
+  display: none;
+}
+
+.resources p {
+  text-align: center;
+  margin-right: 30px;
+}
+
+@media (min-width: 800px) {
+  .resources {
+    display: block;
+  }
+}

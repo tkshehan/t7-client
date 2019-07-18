@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import CharacterSelect from './CharacterSelect';
-import MoveList from './MoveArray';
+import MoveList from './MoveList';
 import Header from './Header';
 
+import './styles.scss';
 import {connect} from 'react-redux';
 import {fetchData, loadData} from '../../actions';
 
@@ -17,7 +18,7 @@ export class FrameDataApp extends Component {
     return (
       <>
         <Header char={this.props.selected} />
-        <main>
+        <main className="main">
           <CharacterSelect />
           <MoveList
             moves={charMoves}

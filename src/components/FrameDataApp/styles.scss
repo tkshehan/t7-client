@@ -1,0 +1,51 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  min-height: 90vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.button {
+  width: 100px;
+  background: none;
+  border: 1px solid black;
+  font-size: inherit;
+  color: inherit;
+  padding: 2px 2px;
+  margin: 2px 0;
+
+  background-color: inherit;
+  border-radius: 3px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Table */
+td, th {
+  border: 1px solid white;
+  text-align: center;
+  padding: 4px;
+}
+
+td:last-child, th:last-child {
+  display: none;
+}
+
+tr {
+  background-color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+@media (min-width: 800px) {
+  td:last-child, th:last-child {
+    display: table-cell;
+  }
+}

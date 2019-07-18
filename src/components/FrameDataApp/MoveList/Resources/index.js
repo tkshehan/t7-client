@@ -1,7 +1,8 @@
 import React from 'react';
 import Modal from './Modal';
 import {connect} from 'react-redux';
-import resources from '../../data/resources';
+import resources from '../../../../data/resources';
+import './styles.scss';
 
 export class Resources extends React.Component {
   constructor(props) {
@@ -30,7 +31,7 @@ export class Resources extends React.Component {
           />
 
           <p>
-            <button onClick={this.toggleModal}>
+            <button className="button" onClick={this.toggleModal}>
               Punishment Guide
           </button>
           </p>

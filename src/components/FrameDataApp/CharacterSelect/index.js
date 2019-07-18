@@ -1,6 +1,7 @@
-import React from 'react'
-import {changeCharacter} from '../../actions';
+import React from 'react';
+import {changeCharacter} from '../../../actions';
 import {connect} from 'react-redux';
+import './styles.scss';
 
 export class CharacterSelect extends React.Component {
 
@@ -21,7 +22,15 @@ export class CharacterSelect extends React.Component {
             {
               this.props.characters.sort().map((char, i) => {
                 return (
-                  <li key={i}><button value={char} onClick={this.handleClick}>{char.toUpperCase()}</button></li>
+                  <li key={i}>
+                    <button
+                      className="button"
+                      value={char}
+                      onClick={this.handleClick}
+                    >
+                      {char.toUpperCase()}
+                    </button>
+                  </li>
                 )
               })
             }
