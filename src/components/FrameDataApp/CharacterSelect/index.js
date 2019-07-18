@@ -1,6 +1,7 @@
 import React from 'react';
 import {changeCharacter} from '../../../actions';
 import {connect} from 'react-redux';
+import './styles.scss';
 
 export class CharacterSelect extends React.Component {
 

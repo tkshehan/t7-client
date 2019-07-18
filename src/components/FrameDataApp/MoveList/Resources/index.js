@@ -2,6 +2,7 @@ import React from 'react';
 import Modal from './Modal';
 import {connect} from 'react-redux';
 import resources from '../../../../data/resources';
+import './styles.scss';
 
 export class Resources extends React.Component {
   constructor(props) {
