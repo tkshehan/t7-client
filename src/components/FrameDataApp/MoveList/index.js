@@ -1,6 +1,7 @@
 import React from 'react';
 import Move from './Move';
 import Resources from './Resources';
+import './styles.scss';
 
 class MoveList extends React.Component {
 
