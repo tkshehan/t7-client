@@ -1,0 +1,27 @@
+.moveList {
+  flex-grow: 1;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.moveList p {
+  text-align: center;
+}
+
+.i10 {
+  background-color: lightyellow;
+}
+
+.i12 {
+  background-color: lightpink;
+}
+
+.i15 {
+  background-color: lightcoral;
+}
+
+@media (min-width: 800px) {
+  .moveList {
+    margin-right: 10;
+  }
+}

@@ -24,7 +24,7 @@ export default {
     punishment: 'https://www.youtube.com/embed/7vyD5ygXkhw',
   },
   kuma: {
-    punishment: 'https://www.youtube.com/embed/UpXMWPhNNmk',
+    punishment: 'https://www.youtube.com/embed/is9aAuIBHIU',
   },
   miguel: {
     punishment: 'https://www.youtube.com/embed/vvTACA6wXQY',
@@ -124,5 +124,11 @@ export default {
   },
   kazuya: {
     punishment: 'https://www.youtube.com/embed/cvRzeS927Us',
+  },
+  lei: {
+    punishment: 'https://www.youtube.com/embed/Si386IW-sz4',
+  },
+  yoshimitsu: {
+    punishment: 'https://www.youtube.com/embed/p37wlGv-sd4',
   },
 };
